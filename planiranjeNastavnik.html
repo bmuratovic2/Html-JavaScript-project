@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet"  href="planiranjeNastavnik.css">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+
+</style>
+<body>
+   <div id="container" class="container">
+      <div class="header">
+          <div class="header image col-s-1" id="col-head"><img id="logica" src="ETF_logo.png" align="center"></div>
+          <div class="header text " id="col-head1" >
+            <a href="raspored.html" class="meni">- Raspored</a>
+            <a href="planiranjeNastavnik.html" class="meni">- Planiranje nastavnika</a>
+            <a href="podaciStudent.html"class="meni">- Podaci o studentu</a>
+            <a href="posjecenost.html"class="meni">- Posjecenost</a>
+            <a href="obavijesti.html"class="meni">- Obavijesti</a></div>
+      </div>
+    </div>
+
+<form class="forma" name="forma" >
+	
+	<label id="naziv">Naziv predmeta:</label> 
+   <input type="text"  id="hh" name="field" onblur="fun(this.value)"><br><br>
+
+      <label id="time1">Vrijeme pocetka:</label>
+      <input type="time" name="datumPocetka"  id="vr" onblur="fun1(this.value)"><br><br>
+       <label>Vrijme kraja: </label>
+      <input type="time" name="datumKraja" id="vr1" onblur="fun2(vr.value,this.value)"><br><br>
+      
+  
+      <label id="pred">Aktivnost: </label>
+
+
+
+	<select name = "dropdown" id="drop">
+            <option val="1" id="predavanje" onselect="fun3(this.value,vr.value,vr1.value)">Predavanja</option>
+            <option  val="2" id="vjezbe" onselect="fun4(this.value,vr.value,vr1.value)">Vjezbe</option>
+         </select><br><br>
+
+        
+
+         <label>Dani u sedmici:</label>
+         <select name = "dropdown" id="drop1">
+            <option selected>Ponedjeljak</option>
+            <option >Utorak</option>
+            <option >Srijeda</option>
+            <option >Četvrtak</option>
+            <option >Petak</option>
+         </select><br><br>
+        
+</form>
+
+<div class="footer f">
+   <p>Elektrotehnicki fakultet u Sarajevu</p>
+ </div>
+ <script src="planiranjeNastavnik.js"></script>
+ <script src="validacija.js"></script>
+
+</body>
+</html>
